@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63C42B6F15AA7E1F00F5C4AD /* tblOrderDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C42B6E15AA7E1F00F5C4AD /* tblOrderDetail.m */; };
+		63C42B7615AA864600F5C4AD /* tblOrderMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C42B7515AA864600F5C4AD /* tblOrderMaster.m */; };
+		63C42B8715AAE59400F5C4AD /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C42B8515AAE59400F5C4AD /* MyTableViewCell.m */; };
+		63C42B8815AAE59400F5C4AD /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C42B8615AAE59400F5C4AD /* MyTableViewCell.xib */; };
+		63C42B8F15AAE5AE00F5C4AD /* SearchProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C42B8A15AAE5AD00F5C4AD /* SearchProduct.m */; };
+		63C42B9015AAE5AE00F5C4AD /* SearchProduct.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C42B8B15AAE5AD00F5C4AD /* SearchProduct.xib */; };
+		63C42B9115AAE5AE00F5C4AD /* ProductDataDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C42B8D15AAE5AD00F5C4AD /* ProductDataDetail.m */; };
+		63C42B9215AAE5AE00F5C4AD /* ProductDataDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C42B8E15AAE5AD00F5C4AD /* ProductDataDetail.xib */; };
+		63C42B9515AAE5C700F5C4AD /* tblProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C42B9415AAE5C700F5C4AD /* tblProduct.m */; };
+		63CFEEC015A2DD680003729C /* ProductInAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CFEEBF15A2DD680003729C /* ProductInAction.m */; };
+		63DC271E15A536130062948E /* tblMerchandize.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DC271D15A536130062948E /* tblMerchandize.m */; };
+		63DC272B15A58D790062948E /* Ovaltine_DB.db in Resources */ = {isa = PBXBuildFile; fileRef = 63DC272A15A58D790062948E /* Ovaltine_DB.db */; };
+		63DC272E15A592EF0062948E /* tblInvoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DC272D15A592EF0062948E /* tblInvoice.m */; };
+		63DC273115A5982B0062948E /* tblCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 63DC273015A5982B0062948E /* tblCollection.m */; };
+		63E443C7159C1056004C88C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E443C6159C1056004C88C2 /* UIKit.framework */; };
+		63E443C9159C1056004C88C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E443C8159C1056004C88C2 /* Foundation.framework */; };
+		63E443CB159C1056004C88C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E443CA159C1056004C88C2 /* CoreGraphics.framework */; };
+		63E443D1159C1056004C88C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63E443CF159C1056004C88C2 /* InfoPlist.strings */; };
+		63E443D3159C1056004C88C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E443D2159C1056004C88C2 /* main.m */; };
+		63E443D7159C1056004C88C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E443D6159C1056004C88C2 /* AppDelegate.m */; };
+		63E443DA159C1056004C88C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E443D9159C1056004C88C2 /* ViewController.m */; };
+		63E443DD159C1056004C88C2 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E443DB159C1056004C88C2 /* ViewController.xib */; };
+		63E4440A159C13F6004C88C2 /* CallCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E443EB159C13F6004C88C2 /* CallCard.m */; };
+		63E4440B159C13F6004C88C2 /* CallCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E443EC159C13F6004C88C2 /* CallCard.xib */; };
+		63E4440C159C13F6004C88C2 /* Merchandise.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E443EE159C13F6004C88C2 /* Merchandise.m */; };
+		63E4440D159C13F6004C88C2 /* Merchandise.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E443EF159C13F6004C88C2 /* Merchandise.xib */; };
+		63E4440E159C13F6004C88C2 /* SalesNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E443F1159C13F6004C88C2 /* SalesNote.m */; };
+		63E4440F159C13F6004C88C2 /* SalesNote.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E443F2159C13F6004C88C2 /* SalesNote.xib */; };
+		63E44410159C13F6004C88C2 /* GoodsReturn.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E443F4159C13F6004C88C2 /* GoodsReturn.m */; };
+		63E44411159C13F6004C88C2 /* GoodsReturn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E443F5159C13F6004C88C2 /* GoodsReturn.xib */; };
+		63E44412159C13F6004C88C2 /* InvoiceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E443F7159C13F6004C88C2 /* InvoiceList.m */; };
+		63E44413159C13F6004C88C2 /* InvoiceList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E443F8159C13F6004C88C2 /* InvoiceList.xib */; };
+		63E44414159C13F6004C88C2 /* InvoiceDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E443FA159C13F6004C88C2 /* InvoiceDetail.m */; };
+		63E44415159C13F6004C88C2 /* InvoiceDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E443FB159C13F6004C88C2 /* InvoiceDetail.xib */; };
+		63E44416159C13F6004C88C2 /* Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E443FD159C13F6004C88C2 /* Collection.m */; };
+		63E44417159C13F6004C88C2 /* Collection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E443FE159C13F6004C88C2 /* Collection.xib */; };
+		63E44418159C13F6004C88C2 /* TakeOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E44400159C13F6004C88C2 /* TakeOrder.m */; };
+		63E44419159C13F6004C88C2 /* TakeOrder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E44401159C13F6004C88C2 /* TakeOrder.xib */; };
+		63E4441A159C13F6004C88C2 /* Delivery.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E44403159C13F6004C88C2 /* Delivery.m */; };
+		63E4441B159C13F6004C88C2 /* Delivery.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E44404159C13F6004C88C2 /* Delivery.xib */; };
+		63E4441C159C13F6004C88C2 /* DeliverySummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E44406159C13F6004C88C2 /* DeliverySummary.m */; };
+		63E4441D159C13F6004C88C2 /* DeliverySummary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E44407159C13F6004C88C2 /* DeliverySummary.xib */; };
+		63E4442E159C3660004C88C2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E4442D159C3660004C88C2 /* MapKit.framework */; };
+		63E44434159C36F4004C88C2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E44433159C36F4004C88C2 /* CoreLocation.framework */; };
+		63E4443C159C4CB6004C88C2 /* CheckInPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E4443A159C4CB5004C88C2 /* CheckInPage.m */; };
+		63E4443D159C4CB6004C88C2 /* CheckInPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E4443B159C4CB6004C88C2 /* CheckInPage.xib */; };
+		63E44446159C5065004C88C2 /* tblSaleTalk.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E44444159C5065004C88C2 /* tblSaleTalk.m */; };
+		63E4444A159C53FE004C88C2 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E44449159C53FE004C88C2 /* libsqlite3.0.dylib */; };
+		63E70255159D8C8200DEECD5 /* tblCallcard_Stock.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E7024E159D8C8100DEECD5 /* tblCallcard_Stock.m */; };
+		63E70256159D8C8200DEECD5 /* tblCallCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E70250159D8C8100DEECD5 /* tblCallCard.m */; };
+		63E70257159D8C8200DEECD5 /* tblPCBrief.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E70252159D8C8100DEECD5 /* tblPCBrief.m */; };
+		63E70258159D8C8200DEECD5 /* tblPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E70254159D8C8100DEECD5 /* tblPlan.m */; };
+		843335A815AC19BD0086F497 /* tblParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 843335A715AC19BD0086F497 /* tblParameter.m */; };
+		844AFC2515AD358B003E365F /* SearchProdTBViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AFC2415AD358B003E365F /* SearchProdTBViewCell.m */; };
+		844AFC2815AD35A0003E365F /* SearchProdTBViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844AFC2715AD35A0003E365F /* SearchProdTBViewCell.xib */; };
+		844AFC3B15AD7943003E365F /* tblReturnDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AFC3A15AD7943003E365F /* tblReturnDetail.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		63C42B6D15AA7E1F00F5C4AD /* tblOrderDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblOrderDetail.h; sourceTree = "<group>"; };
+		63C42B6E15AA7E1F00F5C4AD /* tblOrderDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblOrderDetail.m; sourceTree = "<group>"; };
+		63C42B7415AA864600F5C4AD /* tblOrderMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblOrderMaster.h; sourceTree = "<group>"; };
+		63C42B7515AA864600F5C4AD /* tblOrderMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblOrderMaster.m; sourceTree = "<group>"; };
+		63C42B8415AAE59400F5C4AD /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		63C42B8515AAE59400F5C4AD /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		63C42B8615AAE59400F5C4AD /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		63C42B8915AAE5AD00F5C4AD /* SearchProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchProduct.h; sourceTree = "<group>"; };
+		63C42B8A15AAE5AD00F5C4AD /* SearchProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchProduct.m; sourceTree = "<group>"; };
+		63C42B8B15AAE5AD00F5C4AD /* SearchProduct.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchProduct.xib; sourceTree = "<group>"; };
+		63C42B8C15AAE5AD00F5C4AD /* ProductDataDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDataDetail.h; sourceTree = "<group>"; };
+		63C42B8D15AAE5AD00F5C4AD /* ProductDataDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDataDetail.m; sourceTree = "<group>"; };
+		63C42B8E15AAE5AD00F5C4AD /* ProductDataDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDataDetail.xib; sourceTree = "<group>"; };
+		63C42B9315AAE5C700F5C4AD /* tblProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblProduct.h; sourceTree = "<group>"; };
+		63C42B9415AAE5C700F5C4AD /* tblProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblProduct.m; sourceTree = "<group>"; };
+		63CFEEBE15A2DD680003729C /* ProductInAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductInAction.h; sourceTree = "<group>"; };
+		63CFEEBF15A2DD680003729C /* ProductInAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductInAction.m; sourceTree = "<group>"; };
+		63DC271C15A536130062948E /* tblMerchandize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblMerchandize.h; sourceTree = "<group>"; };
+		63DC271D15A536130062948E /* tblMerchandize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblMerchandize.m; sourceTree = "<group>"; };
+		63DC272A15A58D790062948E /* Ovaltine_DB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ovaltine_DB.db; sourceTree = "<group>"; };
+		63DC272C15A592EF0062948E /* tblInvoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblInvoice.h; sourceTree = "<group>"; };
+		63DC272D15A592EF0062948E /* tblInvoice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblInvoice.m; sourceTree = "<group>"; };
+		63DC272F15A5982B0062948E /* tblCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblCollection.h; sourceTree = "<group>"; };
+		63DC273015A5982B0062948E /* tblCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblCollection.m; sourceTree = "<group>"; };
+		63E443C2159C1056004C88C2 /* TestDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63E443C6159C1056004C88C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		63E443C8159C1056004C88C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63E443CA159C1056004C88C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63E443CE159C1056004C88C2 /* TestDB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestDB-Info.plist"; sourceTree = "<group>"; };
+		63E443D0159C1056004C88C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63E443D2159C1056004C88C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63E443D4159C1056004C88C2 /* TestDB-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestDB-Prefix.pch"; sourceTree = "<group>"; };
+		63E443D5159C1056004C88C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		63E443D6159C1056004C88C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		63E443D8159C1056004C88C2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		63E443D9159C1056004C88C2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		63E443DC159C1056004C88C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		63E443EA159C13F6004C88C2 /* CallCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallCard.h; sourceTree = "<group>"; };
+		63E443EB159C13F6004C88C2 /* CallCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallCard.m; sourceTree = "<group>"; };
+		63E443EC159C13F6004C88C2 /* CallCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallCard.xib; sourceTree = "<group>"; };
+		63E443ED159C13F6004C88C2 /* Merchandise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Merchandise.h; sourceTree = "<group>"; };
+		63E443EE159C13F6004C88C2 /* Merchandise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Merchandise.m; sourceTree = "<group>"; };
+		63E443EF159C13F6004C88C2 /* Merchandise.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Merchandise.xib; sourceTree = "<group>"; };
+		63E443F0159C13F6004C88C2 /* SalesNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesNote.h; sourceTree = "<group>"; };
+		63E443F1159C13F6004C88C2 /* SalesNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesNote.m; sourceTree = "<group>"; };
+		63E443F2159C13F6004C88C2 /* SalesNote.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SalesNote.xib; sourceTree = "<group>"; };
+		63E443F3159C13F6004C88C2 /* GoodsReturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsReturn.h; sourceTree = "<group>"; };
+		63E443F4159C13F6004C88C2 /* GoodsReturn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsReturn.m; sourceTree = "<group>"; };
+		63E443F5159C13F6004C88C2 /* GoodsReturn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsReturn.xib; sourceTree = "<group>"; };
+		63E443F6159C13F6004C88C2 /* InvoiceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoiceList.h; sourceTree = "<group>"; };
+		63E443F7159C13F6004C88C2 /* InvoiceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceList.m; sourceTree = "<group>"; };
+		63E443F8159C13F6004C88C2 /* InvoiceList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvoiceList.xib; sourceTree = "<group>"; };
+		63E443F9159C13F6004C88C2 /* InvoiceDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvoiceDetail.h; sourceTree = "<group>"; };
+		63E443FA159C13F6004C88C2 /* InvoiceDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvoiceDetail.m; sourceTree = "<group>"; };
+		63E443FB159C13F6004C88C2 /* InvoiceDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvoiceDetail.xib; sourceTree = "<group>"; };
+		63E443FC159C13F6004C88C2 /* Collection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
+		63E443FD159C13F6004C88C2 /* Collection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Collection.m; sourceTree = "<group>"; };
+		63E443FE159C13F6004C88C2 /* Collection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Collection.xib; sourceTree = "<group>"; };
+		63E443FF159C13F6004C88C2 /* TakeOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakeOrder.h; sourceTree = "<group>"; };
+		63E44400159C13F6004C88C2 /* TakeOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakeOrder.m; sourceTree = "<group>"; };
+		63E44401159C13F6004C88C2 /* TakeOrder.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TakeOrder.xib; sourceTree = "<group>"; };
+		63E44402159C13F6004C88C2 /* Delivery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delivery.h; sourceTree = "<group>"; };
+		63E44403159C13F6004C88C2 /* Delivery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Delivery.m; sourceTree = "<group>"; };
+		63E44404159C13F6004C88C2 /* Delivery.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Delivery.xib; sourceTree = "<group>"; };
+		63E44405159C13F6004C88C2 /* DeliverySummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliverySummary.h; sourceTree = "<group>"; };
+		63E44406159C13F6004C88C2 /* DeliverySummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliverySummary.m; sourceTree = "<group>"; };
+		63E44407159C13F6004C88C2 /* DeliverySummary.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliverySummary.xib; sourceTree = "<group>"; };
+		63E4442D159C3660004C88C2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		63E44433159C36F4004C88C2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		63E44439159C4CB4004C88C2 /* CheckInPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInPage.h; sourceTree = "<group>"; };
+		63E4443A159C4CB5004C88C2 /* CheckInPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInPage.m; sourceTree = "<group>"; };
+		63E4443B159C4CB6004C88C2 /* CheckInPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckInPage.xib; sourceTree = "<group>"; };
+		63E44443159C5064004C88C2 /* tblSaleTalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblSaleTalk.h; sourceTree = "<group>"; };
+		63E44444159C5065004C88C2 /* tblSaleTalk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblSaleTalk.m; sourceTree = "<group>"; };
+		63E44449159C53FE004C88C2 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		63E7024D159D8C8100DEECD5 /* tblCallcard_Stock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblCallcard_Stock.h; sourceTree = "<group>"; };
+		63E7024E159D8C8100DEECD5 /* tblCallcard_Stock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblCallcard_Stock.m; sourceTree = "<group>"; };
+		63E7024F159D8C8100DEECD5 /* tblCallCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblCallCard.h; sourceTree = "<group>"; };
+		63E70250159D8C8100DEECD5 /* tblCallCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblCallCard.m; sourceTree = "<group>"; };
+		63E70251159D8C8100DEECD5 /* tblPCBrief.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblPCBrief.h; sourceTree = "<group>"; };
+		63E70252159D8C8100DEECD5 /* tblPCBrief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblPCBrief.m; sourceTree = "<group>"; };
+		63E70253159D8C8100DEECD5 /* tblPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblPlan.h; sourceTree = "<group>"; };
+		63E70254159D8C8100DEECD5 /* tblPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblPlan.m; sourceTree = "<group>"; };
+		843335A615AC19BD0086F497 /* tblParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblParameter.h; sourceTree = "<group>"; };
+		843335A715AC19BD0086F497 /* tblParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblParameter.m; sourceTree = "<group>"; };
+		844AFC2315AD358B003E365F /* SearchProdTBViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchProdTBViewCell.h; sourceTree = "<group>"; };
+		844AFC2415AD358B003E365F /* SearchProdTBViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchProdTBViewCell.m; sourceTree = "<group>"; };
+		844AFC2715AD35A0003E365F /* SearchProdTBViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchProdTBViewCell.xib; sourceTree = "<group>"; };
+		844AFC3915AD7943003E365F /* tblReturnDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblReturnDetail.h; sourceTree = "<group>"; };
+		844AFC3A15AD7943003E365F /* tblReturnDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblReturnDetail.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63E443BF159C1056004C88C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E4444A159C53FE004C88C2 /* libsqlite3.0.dylib in Frameworks */,
+				63E44434159C36F4004C88C2 /* CoreLocation.framework in Frameworks */,
+				63E4442E159C3660004C88C2 /* MapKit.framework in Frameworks */,
+				63E443C7159C1056004C88C2 /* UIKit.framework in Frameworks */,
+				63E443C9159C1056004C88C2 /* Foundation.framework in Frameworks */,
+				63E443CB159C1056004C88C2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63CFEEB515A2D2490003729C /* Tong */ = {
+			isa = PBXGroup;
+			children = (
+				63CFEEBE15A2DD680003729C /* ProductInAction.h */,
+				63CFEEBF15A2DD680003729C /* ProductInAction.m */,
+				63DC271C15A536130062948E /* tblMerchandize.h */,
+				63DC271D15A536130062948E /* tblMerchandize.m */,
+				63DC272C15A592EF0062948E /* tblInvoice.h */,
+				63DC272D15A592EF0062948E /* tblInvoice.m */,
+				63DC272F15A5982B0062948E /* tblCollection.h */,
+				63DC273015A5982B0062948E /* tblCollection.m */,
+				63C42B7415AA864600F5C4AD /* tblOrderMaster.h */,
+				63C42B7515AA864600F5C4AD /* tblOrderMaster.m */,
+				63C42B6D15AA7E1F00F5C4AD /* tblOrderDetail.h */,
+				63C42B6E15AA7E1F00F5C4AD /* tblOrderDetail.m */,
+			);
+			name = Tong;
+			sourceTree = "<group>";
+		};
+		63E443B7159C1056004C88C2 = {
+			isa = PBXGroup;
+			children = (
+				63E44449159C53FE004C88C2 /* libsqlite3.0.dylib */,
+				63DC272A15A58D790062948E /* Ovaltine_DB.db */,
+				63E44433159C36F4004C88C2 /* CoreLocation.framework */,
+				63E4442D159C3660004C88C2 /* MapKit.framework */,
+				63E443CC159C1056004C88C2 /* TestDB */,
+				63E443C5159C1056004C88C2 /* Frameworks */,
+				63E443C3159C1056004C88C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63E443C3159C1056004C88C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63E443C2159C1056004C88C2 /* TestDB.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63E443C5159C1056004C88C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63E443C6159C1056004C88C2 /* UIKit.framework */,
+				63E443C8159C1056004C88C2 /* Foundation.framework */,
+				63E443CA159C1056004C88C2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63E443CC159C1056004C88C2 /* TestDB */ = {
+			isa = PBXGroup;
+			children = (
+				63E443D5159C1056004C88C2 /* AppDelegate.h */,
+				63E443D6159C1056004C88C2 /* AppDelegate.m */,
+				63E443D8159C1056004C88C2 /* ViewController.h */,
+				63E443D9159C1056004C88C2 /* ViewController.m */,
+				63E443DB159C1056004C88C2 /* ViewController.xib */,
+				63E4441E159C1401004C88C2 /* Activity */,
+				63E443CD159C1056004C88C2 /* Supporting Files */,
+			);
+			path = TestDB;
+			sourceTree = "<group>";
+		};
+		63E443CD159C1056004C88C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63E443CE159C1056004C88C2 /* TestDB-Info.plist */,
+				63E443CF159C1056004C88C2 /* InfoPlist.strings */,
+				63E443D2159C1056004C88C2 /* main.m */,
+				63E443D4159C1056004C88C2 /* TestDB-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63E4441E159C1401004C88C2 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				63CFEEB515A2D2490003729C /* Tong */,
+				63E44447159C506E004C88C2 /* P_Toon */,
+				63E443EA159C13F6004C88C2 /* CallCard.h */,
+				63E443EB159C13F6004C88C2 /* CallCard.m */,
+				63E443EC159C13F6004C88C2 /* CallCard.xib */,
+				63E443ED159C13F6004C88C2 /* Merchandise.h */,
+				63E443EE159C13F6004C88C2 /* Merchandise.m */,
+				63E443EF159C13F6004C88C2 /* Merchandise.xib */,
+				63E443F0159C13F6004C88C2 /* SalesNote.h */,
+				63E443F1159C13F6004C88C2 /* SalesNote.m */,
+				63E443F2159C13F6004C88C2 /* SalesNote.xib */,
+				63E443F3159C13F6004C88C2 /* GoodsReturn.h */,
+				63E443F4159C13F6004C88C2 /* GoodsReturn.m */,
+				63E443F5159C13F6004C88C2 /* GoodsReturn.xib */,
+				63E443F6159C13F6004C88C2 /* InvoiceList.h */,
+				63E443F7159C13F6004C88C2 /* InvoiceList.m */,
+				63E443F8159C13F6004C88C2 /* InvoiceList.xib */,
+				63E443F9159C13F6004C88C2 /* InvoiceDetail.h */,
+				63E443FA159C13F6004C88C2 /* InvoiceDetail.m */,
+				63E443FB159C13F6004C88C2 /* InvoiceDetail.xib */,
+				63E443FC159C13F6004C88C2 /* Collection.h */,
+				63E443FD159C13F6004C88C2 /* Collection.m */,
+				63E443FE159C13F6004C88C2 /* Collection.xib */,
+				63E443FF159C13F6004C88C2 /* TakeOrder.h */,
+				63E44400159C13F6004C88C2 /* TakeOrder.m */,
+				63E44401159C13F6004C88C2 /* TakeOrder.xib */,
+				63E44402159C13F6004C88C2 /* Delivery.h */,
+				63E44403159C13F6004C88C2 /* Delivery.m */,
+				63E44404159C13F6004C88C2 /* Delivery.xib */,
+				63E44405159C13F6004C88C2 /* DeliverySummary.h */,
+				63E44406159C13F6004C88C2 /* DeliverySummary.m */,
+				63E44407159C13F6004C88C2 /* DeliverySummary.xib */,
+				63E44439159C4CB4004C88C2 /* CheckInPage.h */,
+				63E4443A159C4CB5004C88C2 /* CheckInPage.m */,
+				63E4443B159C4CB6004C88C2 /* CheckInPage.xib */,
+				63C42B8915AAE5AD00F5C4AD /* SearchProduct.h */,
+				63C42B8A15AAE5AD00F5C4AD /* SearchProduct.m */,
+				63C42B8B15AAE5AD00F5C4AD /* SearchProduct.xib */,
+				63C42B8C15AAE5AD00F5C4AD /* ProductDataDetail.h */,
+				63C42B8D15AAE5AD00F5C4AD /* ProductDataDetail.m */,
+				63C42B8E15AAE5AD00F5C4AD /* ProductDataDetail.xib */,
+				63C42B8415AAE59400F5C4AD /* MyTableViewCell.h */,
+				63C42B8515AAE59400F5C4AD /* MyTableViewCell.m */,
+				63C42B8615AAE59400F5C4AD /* MyTableViewCell.xib */,
+				844AFC2315AD358B003E365F /* SearchProdTBViewCell.h */,
+				844AFC2415AD358B003E365F /* SearchProdTBViewCell.m */,
+				844AFC2715AD35A0003E365F /* SearchProdTBViewCell.xib */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		63E44447159C506E004C88C2 /* P_Toon */ = {
+			isa = PBXGroup;
+			children = (
+				63E7024D159D8C8100DEECD5 /* tblCallcard_Stock.h */,
+				63E7024E159D8C8100DEECD5 /* tblCallcard_Stock.m */,
+				63E7024F159D8C8100DEECD5 /* tblCallCard.h */,
+				63E70250159D8C8100DEECD5 /* tblCallCard.m */,
+				63E70251159D8C8100DEECD5 /* tblPCBrief.h */,
+				63E70252159D8C8100DEECD5 /* tblPCBrief.m */,
+				63E70253159D8C8100DEECD5 /* tblPlan.h */,
+				63E70254159D8C8100DEECD5 /* tblPlan.m */,
+				63E44443159C5064004C88C2 /* tblSaleTalk.h */,
+				63E44444159C5065004C88C2 /* tblSaleTalk.m */,
+				63C42B9315AAE5C700F5C4AD /* tblProduct.h */,
+				63C42B9415AAE5C700F5C4AD /* tblProduct.m */,
+				843335A615AC19BD0086F497 /* tblParameter.h */,
+				843335A715AC19BD0086F497 /* tblParameter.m */,
+				844AFC3915AD7943003E365F /* tblReturnDetail.h */,
+				844AFC3A15AD7943003E365F /* tblReturnDetail.m */,
+			);
+			name = P_Toon;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63E443C1159C1056004C88C2 /* TestDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63E443E0159C1056004C88C2 /* Build configuration list for PBXNativeTarget "TestDB" */;
+			buildPhases = (
+				63E443BE159C1056004C88C2 /* Sources */,
+				63E443BF159C1056004C88C2 /* Frameworks */,
+				63E443C0159C1056004C88C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestDB;
+			productName = TestDB;
+			productReference = 63E443C2159C1056004C88C2 /* TestDB.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63E443B9159C1056004C88C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 63E443BC159C1056004C88C2 /* Build configuration list for PBXProject "TestDB" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 63E443B7159C1056004C88C2;
+			productRefGroup = 63E443C3159C1056004C88C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63E443C1159C1056004C88C2 /* TestDB */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63E443C0159C1056004C88C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E443D1159C1056004C88C2 /* InfoPlist.strings in Resources */,
+				63E443DD159C1056004C88C2 /* ViewController.xib in Resources */,
+				63E4440B159C13F6004C88C2 /* CallCard.xib in Resources */,
+				63E4440D159C13F6004C88C2 /* Merchandise.xib in Resources */,
+				63E4440F159C13F6004C88C2 /* SalesNote.xib in Resources */,
+				63E44411159C13F6004C88C2 /* GoodsReturn.xib in Resources */,
+				63E44413159C13F6004C88C2 /* InvoiceList.xib in Resources */,
+				63E44415159C13F6004C88C2 /* InvoiceDetail.xib in Resources */,
+				63E44417159C13F6004C88C2 /* Collection.xib in Resources */,
+				63E44419159C13F6004C88C2 /* TakeOrder.xib in Resources */,
+				63E4441B159C13F6004C88C2 /* Delivery.xib in Resources */,
+				63E4441D159C13F6004C88C2 /* DeliverySummary.xib in Resources */,
+				63E4443D159C4CB6004C88C2 /* CheckInPage.xib in Resources */,
+				63DC272B15A58D790062948E /* Ovaltine_DB.db in Resources */,
+				63C42B8815AAE59400F5C4AD /* MyTableViewCell.xib in Resources */,
+				63C42B9015AAE5AE00F5C4AD /* SearchProduct.xib in Resources */,
+				63C42B9215AAE5AE00F5C4AD /* ProductDataDetail.xib in Resources */,
+				844AFC2815AD35A0003E365F /* SearchProdTBViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63E443BE159C1056004C88C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63E443D3159C1056004C88C2 /* main.m in Sources */,
+				63E443D7159C1056004C88C2 /* AppDelegate.m in Sources */,
+				63E443DA159C1056004C88C2 /* ViewController.m in Sources */,
+				63E4440A159C13F6004C88C2 /* CallCard.m in Sources */,
+				63E4440C159C13F6004C88C2 /* Merchandise.m in Sources */,
+				63E4440E159C13F6004C88C2 /* SalesNote.m in Sources */,
+				63E44410159C13F6004C88C2 /* GoodsReturn.m in Sources */,
+				63E44412159C13F6004C88C2 /* InvoiceList.m in Sources */,
+				63E44414159C13F6004C88C2 /* InvoiceDetail.m in Sources */,
+				63E44416159C13F6004C88C2 /* Collection.m in Sources */,
+				63E44418159C13F6004C88C2 /* TakeOrder.m in Sources */,
+				63E4441A159C13F6004C88C2 /* Delivery.m in Sources */,
+				63E4441C159C13F6004C88C2 /* DeliverySummary.m in Sources */,
+				63E4443C159C4CB6004C88C2 /* CheckInPage.m in Sources */,
+				63E44446159C5065004C88C2 /* tblSaleTalk.m in Sources */,
+				63E70255159D8C8200DEECD5 /* tblCallcard_Stock.m in Sources */,
+				63E70256159D8C8200DEECD5 /* tblCallCard.m in Sources */,
+				63E70257159D8C8200DEECD5 /* tblPCBrief.m in Sources */,
+				63E70258159D8C8200DEECD5 /* tblPlan.m in Sources */,
+				63CFEEC015A2DD680003729C /* ProductInAction.m in Sources */,
+				63DC271E15A536130062948E /* tblMerchandize.m in Sources */,
+				63DC272E15A592EF0062948E /* tblInvoice.m in Sources */,
+				63DC273115A5982B0062948E /* tblCollection.m in Sources */,
+				63C42B6F15AA7E1F00F5C4AD /* tblOrderDetail.m in Sources */,
+				63C42B7615AA864600F5C4AD /* tblOrderMaster.m in Sources */,
+				63C42B8715AAE59400F5C4AD /* MyTableViewCell.m in Sources */,
+				63C42B8F15AAE5AE00F5C4AD /* SearchProduct.m in Sources */,
+				63C42B9115AAE5AE00F5C4AD /* ProductDataDetail.m in Sources */,
+				63C42B9515AAE5C700F5C4AD /* tblProduct.m in Sources */,
+				843335A815AC19BD0086F497 /* tblParameter.m in Sources */,
+				844AFC2515AD358B003E365F /* SearchProdTBViewCell.m in Sources */,
+				844AFC3B15AD7943003E365F /* tblReturnDetail.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63E443CF159C1056004C88C2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63E443D0159C1056004C88C2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		63E443DB159C1056004C88C2 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63E443DC159C1056004C88C2 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63E443DE159C1056004C88C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		63E443DF159C1056004C88C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63E443E1159C1056004C88C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestDB/TestDB-Prefix.pch";
+				INFOPLIST_FILE = "TestDB/TestDB-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		63E443E2159C1056004C88C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestDB/TestDB-Prefix.pch";
+				INFOPLIST_FILE = "TestDB/TestDB-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63E443BC159C1056004C88C2 /* Build configuration list for PBXProject "TestDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63E443DE159C1056004C88C2 /* Debug */,
+				63E443DF159C1056004C88C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63E443E0159C1056004C88C2 /* Build configuration list for PBXNativeTarget "TestDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63E443E1159C1056004C88C2 /* Debug */,
+				63E443E2159C1056004C88C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63E443B9159C1056004C88C2 /* Project object */;
+}
