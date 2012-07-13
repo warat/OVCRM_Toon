@@ -33,6 +33,7 @@
 @synthesize  isCancel;
 @synthesize  activeFlag;
 @synthesize  expireFlag;
+@synthesize  returnAmt; 
 
 @synthesize  productList;
 
@@ -46,6 +47,8 @@ sqlite3_stmt *statement;
 
 -(NSMutableArray *)QueryData:(NSString *)sqlText
 {    
+    productList = [[NSMutableArray alloc] init] ;
+    
     const char *cQuery = [sqlText UTF8String]; 
     
     if (sqlite3_prepare_v2(database, cQuery, -1, &statement, NULL) != SQLITE_OK)
@@ -233,6 +236,7 @@ sqlite3_stmt *statement;
         myProduct.isCancel = tempIsCancel;
         myProduct.activeFlag = tempActiveFlag;
         myProduct.expireFlag = tempExpireFlag;
+        myProduct.returnAmt = @"";
         
         [productList addObject:myProduct];      
         
@@ -255,7 +259,6 @@ sqlite3_stmt *statement;
     
     for(int i=0;i<[paramArr count];i++)
     {
-        // NSLog(@"param value=%@",[paramArr objectAtIndex:i]);
         sqlite3_bind_text(insert_statement, i+1, 
                           [[paramArr objectAtIndex:i] UTF8String],-1,SQLITE_TRANSIENT);
     }                              

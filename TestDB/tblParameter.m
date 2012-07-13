@@ -24,6 +24,9 @@ sqlite3_stmt *statement;
 
 -(NSMutableArray *)QueryData:(NSString *)sqlText
 {    
+    
+    parameterList = [[NSMutableArray alloc] init] ;
+    
     const char *cQuery = [sqlText UTF8String]; 
     
     if (sqlite3_prepare_v2(database, cQuery, -1, &statement, NULL) != SQLITE_OK)

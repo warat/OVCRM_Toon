@@ -34,6 +34,10 @@
 @property(nonatomic,strong) NSString *activeFlag;
 @property(nonatomic,strong) NSString *expireFlag;
 
+//Block A :Property ด้านล่างนี้สำหรับรับinput ในprocessต่างๆ
+@property(nonatomic,strong) NSString *returnAmt; 
+//End Block A
+
 @property(strong , nonatomic) NSMutableArray  *productList;
 
 -(NSString *)DB_Field;

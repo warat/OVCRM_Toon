@@ -98,7 +98,8 @@
         self.searchMyProduct = [[SearchProduct alloc] initWithNibName:@"SearchProduct" bundle:nil];
     }
     [self.searchMyProduct assignBackState:@"Y"];
-    [[self navigationController] pushViewController:self.searchMyProduct  animated:YES] ;
+//    [[self navigationController] pushViewController:self.searchMyProduct  animated:YES] ;
+    [[self navigationController] popViewControllerAnimated:YES] ;
 }
 
 - (void)viewDidLoad

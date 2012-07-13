@@ -14,6 +14,7 @@
 @class ProductDataDetail;
 @class tblProduct;
 @class tblParameter;
+@class tblReturnDetail;
 #define kPICKERCOLUMN 1
 #define kBRANDPICKERTAG 0
 #define kFAMILYPICKERTAG 1
@@ -21,7 +22,7 @@
 @interface SearchProduct : UIViewController
 <UITableViewDataSource,UITableViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,UITextFieldDelegate>
 
-
+@property (strong, nonatomic) NSString * plan_ID;
 @property(strong,nonatomic)  ProductDataDetail * productDataDetail;
 @property(strong,nonatomic)  GoodsReturn * goodsReturn;
 @property(strong,nonatomic) IBOutlet UITableView *myTableView;
@@ -31,6 +32,7 @@
 @property (nonatomic,strong)  UIPickerView *pickerFamily;
 @property (nonatomic,strong)  UIPickerView *activePicker;
 @property (nonatomic,strong) IBOutlet  UIPickerView *myPicker;
+@property (nonatomic,strong) IBOutlet UIButton *submitButton;
 @property(nonatomic,strong) NSArray *pickersArray;
 @property(strong,nonatomic)NSMutableArray *productList;
 @property(strong,nonatomic)NSMutableArray *parameterList;

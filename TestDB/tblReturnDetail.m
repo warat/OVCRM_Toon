@@ -27,11 +27,14 @@ sqlite3_stmt *statement;
 
 -(NSString *)DB_Field
 {
-    return @"PK,Plan_ID,Product_ID,Quanity,Reason,RT_Date,RT_Time";
+    return @"PK,Plan_ID,Product_ID,Quantity,Reason,RT_Date,RT_Time";
 }
 
 -(NSMutableArray *)QueryData:(NSString *)sqlText
 {    
+    
+    returnList = [[NSMutableArray alloc] init] ;
+    
     const char *cQuery = [sqlText UTF8String]; 
     
     if (sqlite3_prepare_v2(database, cQuery, -1, &statement, NULL) != SQLITE_OK)
@@ -65,7 +68,12 @@ sqlite3_stmt *statement;
             tempProduct_ID = [NSString stringWithUTF8String: cProduct_ID]; 
         } 
         
-        int pQuantity = sqlite3_column_int(statement, 3); 
+        const char *cQuantity = (const char *) sqlite3_column_text(statement, 3);                
+        NSString *tempQuantity = nil;      
+        if (cQuantity != NULL)
+        {
+            tempQuantity = [NSString stringWithUTF8String: cQuantity]; 
+        } 
         
         const char *cReason = (const char *) sqlite3_column_text(statement, 4);                
         NSString *tempReason = nil;      
@@ -95,7 +103,7 @@ sqlite3_stmt *statement;
         myReturn.PK = tempPK;
         myReturn.plan_ID = tempPlan_ID;
         myReturn.product_ID = tempProduct_ID;             
-        myReturn.quantity = pQuantity;
+        myReturn.quantity = tempQuantity;
         myReturn.reason = tempReason;
         myReturn.rtDate = tempRT_Date;
         myReturn.rtTime = tempRT_Time;
@@ -176,5 +184,28 @@ sqlite3_stmt *statement;
     return result;
 }
 
+-(NSString *)GetMaxRnNo
+{
+    
+    NSString * tempMax = nil;  
+    NSString * sql = [NSString stringWithFormat:@"Select PK From ReturnDetail Where CAST(PK as INTEGER) = (Select MAX(CAST(PK as INTEGER))  From ReturnDetail)"];
+    
+    const char *cQuery = [sql UTF8String]; 
+    if (sqlite3_prepare_v2(database, cQuery, -1, &statement, NULL) != SQLITE_OK)
+    {
+        NSLog(@"Query Error:%@",statement);
+    }       
+    NSInteger *count=0;
+    while (sqlite3_step(statement) == SQLITE_ROW)
+    {
+        const char *PK = (const char *) sqlite3_column_text(statement, 0);
+        if (PK != NULL) 
+        {
+            tempMax = [NSString stringWithUTF8String: PK]; 
+        }  
+        count = count+1;
+    }
+    return tempMax;
+}
 
 @end

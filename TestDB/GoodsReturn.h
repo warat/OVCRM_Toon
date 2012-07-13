@@ -7,29 +7,41 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class ProductDataDetail;
 @class SearchProduct;
 @class tblReturnDetail;
+@class tblProduct;
+@class GoodReturnTBViewCell;
+#define k_RETURN_AMT_TAG 2
 
 @interface GoodsReturn : UIViewController
-<UITableViewDataSource,UITableViewDelegate>
+<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 {
     NSString * account_ID;
     NSString * plan_ID;
 }
 
-@property (strong, nonatomic) NSArray * arrData1;
-@property (strong, nonatomic) NSArray * arrData2;
-@property (strong, nonatomic) NSArray * arrData3;
 @property (strong, nonatomic) NSString * account_ID;
 @property (strong, nonatomic) NSString * plan_ID;
 @property (strong, nonatomic) NSString *addProductCode;
-@property (strong, nonatomic) NSMutableArray *arrProdReturn;
+@property (strong, nonatomic) NSMutableArray *returnList;
+@property (strong,nonatomic) NSMutableArray *productList;
 
 @property(strong,nonatomic) IBOutlet UITextView *noteTextView;
+@property(strong,nonatomic) IBOutlet UITableView *myTableView;
 
-@property (strong, nonatomic) IBOutlet ProductDataDetail * productDataDetail;
-@property (strong, nonatomic) IBOutlet SearchProduct * searchProduct;
+@property(strong,nonatomic) NSMutableArray *arrReturnData;
+
+@property (nonatomic, retain) IBOutlet UIView *headerView;
+
+@property (strong, nonatomic)  ProductDataDetail * productDataDetail;
+@property (strong, nonatomic)  SearchProduct * searchProduct;
+@property (strong, nonatomic) tblProduct *tblProduct;
+@property (strong, nonatomic) tblReturnDetail *tblReturnDetail;
+
+@property(strong, nonatomic) NSString *LoadState;
+
 - (IBAction)searchProduct:(id)sender;
-- (void)AddNewProduct;
+- (IBAction)backgroungTab;
 @end

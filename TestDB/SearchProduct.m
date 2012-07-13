@@ -13,6 +13,7 @@
 #import "SearchProdTBViewCell.h"
 #import "ProductDataDetail.h"
 #import "GoodsReturn.h"
+#import "tblReturnDetail.h"
 
 @interface SearchProduct ()
 
@@ -26,12 +27,14 @@
 @synthesize goodsReturn = _goodsReturn;
 @synthesize myTableView = _myTableView;
 @synthesize headerView,headerViewSelectable;
+@synthesize submitButton;
 @synthesize productList;
 @synthesize parameterList;
 @synthesize arrPickerList;
 @synthesize selectedProduct;
 @synthesize backState;
 @synthesize previousPage;
+@synthesize plan_ID;
 
 @synthesize arrSearchFamily,arrSearchBrand;
 @synthesize pickerBrand , pickerFamily;
@@ -61,22 +64,98 @@
     self.backState = state;
 }
 
+-(NSString *) GoodsReturnSaveDB
+{
+    tblReturnDetail *myReturn = [[tblReturnDetail alloc] init];
+    NSMutableArray *returnList = [[NSMutableArray alloc] init];
+    
+    //เมื่อเรียกจากหน้าSearchProdudct จะไม่เข้า ViewDidLoad จึงต้องallocate และ OpenConnectionในนี้ด้วย
+    if ([myReturn OpenConnection] == NO) 
+    {
+        return @"N";
+    }
+    
+    //******************* ดึงค่าเก่าที่เคย add return ไว้จากตาราง ReturnDetail ********************
+    tblReturnDetail *tempReturn = [[tblReturnDetail alloc] init];
+    NSMutableDictionary *mapping = [NSMutableDictionary dictionary];   
+    
+    NSString *dbReturnNote = [[NSString alloc] init];    
+    
+    NSString *tableField = [myReturn DB_Field] ; 
+    NSString *cond = [[NSString alloc] initWithFormat:@"select %@ from ReturnDetail where Plan_ID='%@'",tableField,plan_ID];
+    
+    NSLog(@"cond=%@" , cond);
+    
+    
+    returnList=[myReturn QueryData:cond]; 
+    NSLog(@"count=%i" , returnList.count);
+    for (int xx=0; xx< returnList.count; xx++)
+    {    
+        tempReturn = [returnList objectAtIndex:xx];
+        [mapping setObject:tempReturn.quantity forKey:tempReturn.product_ID];  
+        dbReturnNote = tempReturn.reason;
+    }
+    //***************************************************************************************
+    
+    
+    //******************* Save Productใหม่ ลง Database ********************    
+    NSString *addProdString = self.txtSelectProductCode.text;
+    NSArray *arrAddProd  = [addProdString componentsSeparatedByString:@","];
+    NSArray *paramArray = [NSArray alloc];
+    NSString * sql = [NSString alloc];
+    
+    for (int i=0;i<=arrAddProd.count-1;i++)
+    {
+        NSString *oldData = [mapping objectForKey: [arrAddProd objectAtIndex:i]];
+        if (oldData == nil) //Product ไม่่ซ้ำ ,add ได้
+        {
+            paramArray = [NSArray arrayWithObjects:plan_ID,plan_ID,[arrAddProd objectAtIndex:i] ,@"0",dbReturnNote, nil];                     
+            
+            //Insert ค่าโดยให้PK เท่ากับPlan_ID ไปก่อน เนื่องจากแผนที่สร้างใหม่ ตอนsync ขึ้นฝั่ง Sale force ไม่ได้มีPKอยู่
+            sql = [NSString stringWithFormat:@"Insert Into ReturnDetail (PK,Plan_ID,Product_ID,Quantity,Reason) Values (?,?,?,?,?)"];
+            if ([myReturn ExecSQL:sql parameterArray:paramArray] == NO)
+            {
+                return @"N"; //Save to database Fail
+            }
+            
+        }
+        
+    }   
+    //********************************************************************
+    
+    return @"Y"; //Save to database Success     
+}
+
+
 - (IBAction)SubmitSelectProduct
 {
-    
-//    GoodsReturn *pageGoodReturn = [[GoodsReturn alloc] init];    
-//    pageGoodReturn.addProductCode = self.txtSelectProductCode.text;
     if (!self.goodsReturn) 
     {
         self.goodsReturn = [[GoodsReturn alloc] initWithNibName:@"GoodsReturn" bundle:nil];
-    }
-    self.goodsReturn.addProductCode =  self.txtSelectProductCode.text;
-    [self.goodsReturn AddNewProduct];
-    [[self navigationController] pushViewController:self.goodsReturn  animated:YES] ;
+    }            
+    
+    //txtSelectProductCode is in format 'c001''c002' เปลี่ยนเป็น c001,c002 เพื่อใช้ Save DB ในหน้าGoodsReturn
+    self.txtSelectProductCode.text = [self.txtSelectProductCode.text stringByReplacingOccurrencesOfString:@"''" withString:@","];
+     self.txtSelectProductCode.text = [self.txtSelectProductCode.text stringByReplacingOccurrencesOfString:@"'" withString:@""];    
+
+   if ([[self GoodsReturnSaveDB] isEqualToString:@"Y"]) //Save Success
+   {
+
+      [self.navigationController popViewControllerAnimated:YES]; 
+//       [self.goodsReturn  ReloadGoodsReturn];
+   }
+   else
+   {
+       UIAlertView *alertDialog;
+       alertDialog = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Save Fail!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+       [alertDialog show];
+   }
+
 }
 
 - (void)viewDidLoad
 {        
+//    self.navigationController.navigationBarHidden = YES;
     self.navigationItem.title = @"ค้นหาสินค้า"; 
     // Release any retained subviews of the main view.
     arrProdCode = [[NSMutableArray alloc] init];
@@ -88,14 +167,10 @@
        
     [self LoadMasterData];
     self.myPicker.hidden = YES;
-//    if ([self.previousPage isEqualToString:@"GR"])
-//    {
-//        headerView.hidden = YES;
-//    }
-//    else
-//    {
-//        headerViewSelectable.hidden = YES;
-//    }
+    if (![self.previousPage isEqualToString:@"GR"])
+    {
+        self.submitButton.hidden = YES;
+    }   
 
     
     [super viewDidLoad];    
@@ -110,19 +185,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-//    self.pickerBrand.hidden = YES;
-//    self.pickerFamily.hidden = NO;
-    //In case redirect from product detail, show search result
-//    NSLog(@"Back=***%@",self.backState);
-//    if (![self.backState isEqualToString:@"Y"])
-//    {
-//        arrProdCode = [[NSMutableArray alloc] init];
-//        arrProdName = [[NSMutableArray alloc] init];
-//        arrProdFamily = [[NSMutableArray alloc] init];
-//        arrProdCost = [[NSMutableArray alloc] init];
-//        
-//        [self.myTableView reloadData];    
-//    }    
+  
 }
 
 -(IBAction)backgroungTab
@@ -270,11 +333,11 @@
     NSInteger rowIndex = [self getRowIndex:switchItem];    
     NSString *sProdCode =  [arrProdCode objectAtIndex:rowIndex];
     NSString *sAllSelectItem= self.txtSelectProductCode.text;//[NSString alloc];
-    NSString *sCheckString = [[NSString alloc] initWithFormat:@"/%@/",sProdCode];
+    NSString *sCheckString = [[NSString alloc] initWithFormat:@"'%@'",sProdCode];
 
     if ([switchItem isOn]) 
     {    
-        //Select product code is in format /c001//c002/
+        //Select product code is in format 'c001''c002'
         sAllSelectItem  = [NSString stringWithFormat:@"%@%@",sAllSelectItem,sCheckString];  
     }
     
@@ -328,7 +391,7 @@
         arrProdFamily = [[NSMutableArray alloc] init];
         arrProdCost = [[NSMutableArray alloc] init];
         
-        productList=[myProduct QueryData:cond];               
+        productList=[myProduct QueryData:cond];                               
         
         if(productList.count > 0){
            for (int i=0;i<=productList.count-1;i++)

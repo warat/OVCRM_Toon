@@ -14,7 +14,7 @@
 @property(nonatomic,strong) NSString *PK;
 @property(nonatomic,strong) NSString *plan_ID;
 @property(nonatomic,strong) NSString *product_ID;
-@property(nonatomic,assign) NSInteger quantity;
+@property(nonatomic,strong) NSString *quantity;
 @property(nonatomic,strong) NSString *reason;
 @property(nonatomic,strong) NSString *rtDate;
 @property(nonatomic,strong) NSString *rtTime;
@@ -26,5 +26,7 @@
 -(bool)OpenConnection;
 -(bool)ExecSQL : (NSString *)addText
  parameterArray:(NSArray *) paramArr;
+
+-(NSString *)GetMaxRnNo;
 
 @end

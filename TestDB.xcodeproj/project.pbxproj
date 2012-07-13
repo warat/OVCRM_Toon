@@ -63,6 +63,8 @@
 		844AFC2515AD358B003E365F /* SearchProdTBViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AFC2415AD358B003E365F /* SearchProdTBViewCell.m */; };
 		844AFC2815AD35A0003E365F /* SearchProdTBViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844AFC2715AD35A0003E365F /* SearchProdTBViewCell.xib */; };
 		844AFC3B15AD7943003E365F /* tblReturnDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AFC3A15AD7943003E365F /* tblReturnDetail.m */; };
+		84FA4A5D15AE85EB003597EB /* GoodReturnTBViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FA4A5C15AE85EB003597EB /* GoodReturnTBViewCell.m */; };
+		84FA4A6015AE8600003597EB /* GoodReturnTBViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FA4A5F15AE8600003597EB /* GoodReturnTBViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +158,9 @@
 		844AFC2715AD35A0003E365F /* SearchProdTBViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchProdTBViewCell.xib; sourceTree = "<group>"; };
 		844AFC3915AD7943003E365F /* tblReturnDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblReturnDetail.h; sourceTree = "<group>"; };
 		844AFC3A15AD7943003E365F /* tblReturnDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblReturnDetail.m; sourceTree = "<group>"; };
+		84FA4A5B15AE85EB003597EB /* GoodReturnTBViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodReturnTBViewCell.h; sourceTree = "<group>"; };
+		84FA4A5C15AE85EB003597EB /* GoodReturnTBViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodReturnTBViewCell.m; sourceTree = "<group>"; };
+		84FA4A5F15AE8600003597EB /* GoodReturnTBViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodReturnTBViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +305,9 @@
 				844AFC2315AD358B003E365F /* SearchProdTBViewCell.h */,
 				844AFC2415AD358B003E365F /* SearchProdTBViewCell.m */,
 				844AFC2715AD35A0003E365F /* SearchProdTBViewCell.xib */,
+				84FA4A5B15AE85EB003597EB /* GoodReturnTBViewCell.h */,
+				84FA4A5C15AE85EB003597EB /* GoodReturnTBViewCell.m */,
+				84FA4A5F15AE8600003597EB /* GoodReturnTBViewCell.xib */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -395,6 +403,7 @@
 				63C42B9015AAE5AE00F5C4AD /* SearchProduct.xib in Resources */,
 				63C42B9215AAE5AE00F5C4AD /* ProductDataDetail.xib in Resources */,
 				844AFC2815AD35A0003E365F /* SearchProdTBViewCell.xib in Resources */,
+				84FA4A6015AE8600003597EB /* GoodReturnTBViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +446,7 @@
 				843335A815AC19BD0086F497 /* tblParameter.m in Sources */,
 				844AFC2515AD358B003E365F /* SearchProdTBViewCell.m in Sources */,
 				844AFC3B15AD7943003E365F /* tblReturnDetail.m in Sources */,
+				84FA4A5D15AE85EB003597EB /* GoodReturnTBViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
